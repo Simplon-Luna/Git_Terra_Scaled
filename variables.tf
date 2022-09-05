@@ -1,3 +1,35 @@
+variable "prefix" {
+  default ="b4g4ld"
+  description =" ça n'as pas d'importance"
+}
+
+variable "resource_group_name_prefix" {
+  default     = "${var.prefix}"
+  description = "Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription."
+}
+
+variable "resource_group_location" {
+  default     = "eastus"
+  description = "Location of the resource group."
+}
+
+## ---
+variable "location" {
+
+}
+variable "ssh_key" {
+
+}
+
+variable "resource_group_name" {
+  default = "terraform-test"
+}
+
+variable "vm_os_simple" {
+  
+}
+
+### ----
 variable "resource_group_name" {
   description = "The name of the resource group in which the resources will be created"
   default     = "vmssrg"
@@ -5,7 +37,7 @@ variable "resource_group_name" {
 
 variable "location" {
   description = "The location where the resources will be created"
-  default     = ""
+  default     = "eastus"
 }
 
 variable "vm_size" {
@@ -45,7 +77,7 @@ variable "admin_password" {
 
 variable "ssh_key" {
   description = "Path to the public key to be used for ssh access to the VM"
-  default     = "~/.ssh/id_rsa.pub"
+  default     = "/.ssh/ssh.pub"
 }
 
 variable "nb_instance" {
